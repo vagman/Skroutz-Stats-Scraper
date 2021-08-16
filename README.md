@@ -1,2 +1,7 @@
-# skroutz-scrapper
-A skroutz scrapper to get my personal stats.
+## Personal statistics from [Skroutz.gr](https://www.skroutz.gr/) (WorkInProgress)
+Simple web scraper for getting user statistics about:
+* Products reviews
+* Total upvotes
+* Comments
+* Shop reviews
+
