@@ -1,10 +1,12 @@
 from source_file import SourceFile
+from config import URLConfiguration
 import requests
 from bs4 import BeautifulSoup as bs
 
-target_url = "https://www.skroutz.gr/account/"
 
-response = requests.get(target_url, headers = SourceFile.headers, cookies = SourceFile.cookies)
+url_config = URLConfiguration()
+
+response = requests.get(url_config.personal_statistics, headers = SourceFile.headers, cookies = SourceFile.cookies)
 soup = bs(response.content, "html.parser")
 
 # Select <div> element that consists of the <ul> of the stats
@@ -25,3 +27,5 @@ print("Product reviews: {}\nUpvotes: {}\nShop reviews: {}\nComments: {}".format(
 # Upvotes: 509
 # Shop reviews: 23
 # Comments: 884
+
+
